@@ -18,7 +18,7 @@ const Banner = () => {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                 }
-          }
+            }
         }
     `);
 
