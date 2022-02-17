@@ -1,17 +1,16 @@
-
 import React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
-import { jsx, css } from '@emotion/react';
 import Navigation from './navigation';
+import { css } from '@emotion/react';
 
 const Header = () => {
 
     const { logo } = useStaticQuery(graphql`
         query {
             logo: file(relativePath: {eq: "logo.svg"}) {
-              publicURL
+                publicURL
             }
-          }
+        }
     `);
 
     return (
@@ -26,6 +25,7 @@ const Header = () => {
                     max-width: 120rem;
                     margin: 0 auto;
                     text-align: center;
+
                     @media(min-width: 768px) {
                         display: flex;
                         align-items: center;
@@ -36,6 +36,7 @@ const Header = () => {
                 <Link to={'/'}>
                     <img src={logo.publicURL} alt="Logo" />
                 </Link>
+
                 <Navigation />
             </div>
         </header>

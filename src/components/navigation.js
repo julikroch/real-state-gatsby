@@ -6,6 +6,7 @@ const Nav = styled.nav`
     display: flex;
     flex-direction: column;
     padding-bottom: 3rem;
+
     @media(min-width:768px) {
         padding: 0;
         flex-direction: row;
@@ -24,15 +25,17 @@ const NavLink = styled(Link)`
     &.current {
         border-bottom: 2px solid #FFF
     }
+
 `;
 
-const Navigation = () => (
-    <Nav>
-        <NavLink to={'/'} activeClassName='current'>Home</NavLink>
-        <NavLink to={'/about-us'} activeClassName='current'>About us</NavLink>
-        <NavLink to={'/states'} activeClassName='current'>States</NavLink>
-    </Nav>
-)
-
+const Navigation = () => {
+    return (
+        <Nav>
+            <NavLink to={'/'} activeClassName='current'>Home</NavLink>
+            <NavLink to={'/about-us'} activeClassName='current'>About us</NavLink>
+            <NavLink to={'/estates'} activeClassName='current'>Estates</NavLink>
+        </Nav>
+    );
+}
 
 export default Navigation;
